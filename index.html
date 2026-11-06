@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Меню Нейробара">
+<meta name="theme-color" content="#0a0420">
+<meta name="google" content="notranslate">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="manifest" href="manifest.json">
+<title>Меню Нейробара</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="stage">
+  <img id="bg" src="assets/bg.jpg" alt="" draggable="false">
+  <div id="shade"></div>
+  <canvas id="fx"></canvas>
+
+  <div class="mk tl">AI-коктейль<br>под твоё настроение</div>
+  <div class="mk tr"><span>Designing emotions<br>Shaping cocktails</span><i class="pillstar"><i class="spk"></i></i></div>
+  <i class="spk c1"></i><i class="spk c2"></i><i class="spk c3"></i>
+
+  <main id="menu">
+    <header class="head">
+      <h1 class="title" id="title"></h1>
+      <div class="sub" id="sub"></div>
+    </header>
+    <section class="grid" id="grid"></section>
+    <footer class="foot"><i class="spk"></i><span id="foot"></span></footer>
+  </main>
+</div>
+<script src="assets/menu.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
