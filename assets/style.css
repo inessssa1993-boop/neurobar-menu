@@ -193,3 +193,18 @@ body.still .card{opacity:1!important;transform:none!important}
   .glass img{width:auto!important;max-width:100%;max-height:100%}
 }
 @media (max-aspect-ratio:1/1) and (min-width:601px){ #menu{padding-top:calc(var(--u)*7)} .grid{margin-top:calc(var(--u)*2.4)} }
+
+/* телефон: страница реально прокручивается (контейнер сцены не фиксируется и не обрезает) */
+@media (max-aspect-ratio:1/1) and (max-width:600px){
+  #stage{position:relative;inset:auto;overflow:visible;min-height:100vh;height:auto}
+  #menu{position:relative;overflow:visible;min-height:100vh}
+  .mk,.c1,.c2,.c3{position:absolute}
+}
+
+/* планшет вертикально: единица измерения учитывает и ширину, и высоту (чтобы 2x2 всегда помещалась) */
+@media (max-aspect-ratio:1/1) and (min-width:601px){
+  :root{--u:min(1.85vw,.96vh)}
+  .glass{height:calc(var(--u)*13.5)}
+  .list li{font-size:max(12px,calc(var(--u)*1.7))}
+  .foot{font-size:max(11px,calc(var(--u)*1.7));white-space:nowrap}
+}
