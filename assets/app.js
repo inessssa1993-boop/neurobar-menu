@@ -56,7 +56,11 @@
     const SP = sprite(), rnd = (a, b) => a + Math.random() * (b - a);
     const stars = Array.from({ length: 70 }, () => ({ x: Math.random(), y: Math.random(), r: rnd(2, 6), ph: rnd(0, 6.3), sp: rnd(.6, 2) }));
     const snow = Array.from({ length: 40 }, () => ({ x: Math.random(), y: Math.random(), r: rnd(2, 5), vy: rnd(.02, .06), ph: rnd(0, 6.3), dx: rnd(.01, .03) }));
-    function size() { const d = Math.min(window.devicePixelRatio || 1, 1.5); W = cv.width = Math.round(innerWidth * d); H = cv.height = Math.round(innerHeight * d); }
+    let lw = 0;
+    function size() {
+      if (lw === innerWidth && phone) return;   // на телефоне при прокрутке меняется только высота (адресная строка): не перерисовываем canvas
+      lw = innerWidth; const d = Math.min(window.devicePixelRatio || 1, 1.5); W = cv.width = Math.round(innerWidth * d); H = cv.height = Math.round(innerHeight * d);
+    }
     function frame(t) {
       raf = requestAnimationFrame(frame);
       if (t - prev < 32) return;

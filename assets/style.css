@@ -208,3 +208,11 @@ body.still .card{opacity:1!important;transform:none!important}
   .list li{font-size:max(12px,calc(var(--u)*1.7))}
   .foot{font-size:max(11px,calc(var(--u)*1.7));white-space:nowrap}
 }
+
+/* телефон: единица измерения только от ширины экрана — высота меняется при прокрутке (адресная строка), и это не должно менять размеры */
+@media (max-aspect-ratio:1/1) and (max-width:600px){
+  :root{--u:2.2vw}
+  #menu{min-height:100vh;min-height:100svh}
+  #stage{min-height:100vh;min-height:100svh}
+}
+@media (max-aspect-ratio:1/1) and (max-width:360px){ :root{--u:2.3vw} }
