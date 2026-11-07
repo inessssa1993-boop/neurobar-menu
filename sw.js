@@ -1,6 +1,6 @@
 // Service worker: работа офлайн после первой загрузки. Сеть сначала (свежие правки), кэш как запасной.
 const V = 'neurobar-menu-v1';
-const FILES = ['./', 'index.html', 'manifest.json', 'assets/style.css', 'assets/app.js', 'assets/menu.js', 'assets/bg.jpg', 'assets/icon.png',
+const FILES = ['./', 'index.html', 'manifest.json', 'assets/style.css', 'assets/app.js', 'assets/nosleep.mp4', 'assets/menu.js', 'assets/bg.jpg', 'assets/icon.png',
   'assets/fonts/Coil-Regular.otf', 'assets/fonts/Coil-Medium.otf', 'assets/fonts/CormorantGaramond-cyr.woff2', 'assets/fonts/CormorantGaramond-lat.woff2',
   'assets/cocktails/strawberry.webp', 'assets/cocktails/lavender.webp', 'assets/cocktails/dew.webp', 'assets/cocktails/sour.webp'];
 self.addEventListener('install', e => {
